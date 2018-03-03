@@ -82,6 +82,12 @@ class GithubUsersState extends State<GithubUsers> {
         child: new Image.network(elem["avatar_url"])
       ),
       subtitle: new Text(elem["url"]),
+      onTap: () => _userSelected(elem["login"]),
     );
+  }
+
+  _userSelected(id) {
+    print("Elem tapped $id");
+    Navigator.pushNamed(context, "/detail:$id");
   }
 }
