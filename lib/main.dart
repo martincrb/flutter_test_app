@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
+import 'package:flutter_test_app/RandomWordsWidget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
           title: new Text('Welcome to Flutter'),
         ),
         body: new Center(
-          child: new Text('Hello World'),
+          child: new RandomWords(),
         ),
       ),
     );
