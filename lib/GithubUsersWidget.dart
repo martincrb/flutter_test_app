@@ -39,7 +39,9 @@ class GithubUsersState extends State<GithubUsers> {
     return new FutureBuilder(
       builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
         if (!snapshot.hasData)
-          return new Container();
+          return new Center(
+            child: new CircularProgressIndicator(),
+          );
         List content = snapshot.data;
         return _buildListInternal(content);
       },
